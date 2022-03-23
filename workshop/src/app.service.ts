@@ -9,7 +9,7 @@ export class AppService {
     const article = await this.databaseService.findArticle(title);
 
     if (!article) {
-      throw new NotFoundException('Article ${title} not found.');
+      throw new NotFoundException(`Article ${title} not found.`);
     }
     return article;
   }
