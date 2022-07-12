@@ -14,6 +14,10 @@ export class AppService {
     return article;
   }
 
+  getHello(): string {
+    return 'Hello World!';
+  }
+
   putArticle(title: string, updateArticle: ArticleDto): Promise<ArticleDto> {
     return this.databaseService.updateArticle(title, updateArticle);
   }

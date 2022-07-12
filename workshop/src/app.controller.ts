@@ -6,6 +6,10 @@ import { ArticleDto } from './article.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
   @Get('/:title')
   getArticle(@Param('title') title: string): Promise<ArticleDto> {
     return this.appService.getArticle(title);
